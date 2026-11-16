@@ -1,0 +1,34 @@
+{
+  "manifest_version": 3,
+  "name": "ChatGPT Auto Read",
+  "version": "1.2.6",
+  "description": "Automatically starts ChatGPT\u2019s built-in Read aloud on new replies.",
+  "content_scripts": [
+    {
+      "matches": [
+        "https://chatgpt.com/*"
+      ],
+      "js": [
+        "playback.js"
+      ],
+      "run_at": "document_start",
+      "world": "MAIN"
+    },
+    {
+      "matches": [
+        "https://chatgpt.com/*"
+      ],
+      "js": [
+        "reader.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ],
+  "permissions": [
+    "storage"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "ChatGPT Auto Read"
+  }
+}

@@ -1,0 +1,11 @@
+:root { color-scheme: light dark; font: 14px system-ui; }
+body { width: 220px; margin: 0; }
+main { padding: 14px 16px; }
+.row { display: flex; justify-content: space-between; align-items: center; }
+.row + .row { margin-top: 14px; }
+output { font-variant-numeric: tabular-nums; }
+#speed { width: 100%; margin: 8px 0 0; }
+#enabled { appearance: none; width: 34px; height: 19px; border-radius: 12px; background: #777; padding: 3px; cursor: pointer; }
+#enabled::before { content: ''; display: block; border-radius: 50%; width: 13px; height: 13px; background: white; }
+#enabled:checked { background: #097951; }
+#enabled:checked::before { transform: translateX(15px); }
